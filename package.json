@@ -1,0 +1,18 @@
+{
+  "name": "@betino/ioc",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/index.js",
+  "author": "Pau Segarra",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "5.3.2"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
+  "files": ["dist"]
+}

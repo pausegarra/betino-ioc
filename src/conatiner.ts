@@ -1,8 +1,13 @@
 export class Container {
   static dependencies = new Map<string, any>();
 
-  static register<T>(token: string, constructor: any, loadDependencies = false) {
-    const instance = loadDependencies ? this.inject(constructor) : new constructor();
+  static register<T>(token: string, constructor: any, loadDependencies = false, isInstance = false) {
+    let instance;
+    if (isInstance) {
+      instance = constructor;
+    } else {
+      instance = loadDependencies ? this.inject(constructor) : new constructor();
+    }
     this.dependencies.set(token, instance);
   }
 

@@ -30,3 +30,5 @@ export class Container {
     return new clazz(...injections);
   }
 }
+
+export const container = new Container();

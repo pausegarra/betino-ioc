@@ -1,4 +1,4 @@
 import 'reflect-metadata'
 
-export { Container } from './conatiner';
+export { container, Container } from './conatiner';
 export { Inject } from './inject';

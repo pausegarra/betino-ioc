@@ -1,7 +1,12 @@
+type RegisterOptions = {
+  loadDependencies: boolean;
+  isInstance: boolean;
+}
+
 export class Container {
   static dependencies = new Map<string, any>();
 
-  static register<T>(token: string, constructor: any, loadDependencies = false, isInstance = false) {
+  static register<T>(token: string, constructor: any, { loadDependencies = false, isInstance = false }: RegisterOptions) {
     let instance;
     if (isInstance) {
       instance = constructor;

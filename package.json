@@ -1,6 +1,6 @@
 {
 	"name": "@betino/ioc",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"private": false,
 	"type": "commonjs",
 	"repository": "https://github.com/pausegarra/betino-ioc.git",

@@ -6,12 +6,12 @@ type RegisterOptions = {
 export class Container {
   static dependencies = new Map<string, any>();
 
-  static register<T>(token: string, constructor: any, { loadDependencies = false, isInstance = false }: RegisterOptions = {}) {
+  static register<T>(token: string, constructor: any, options?: RegisterOptions) {
     let instance;
-    if (isInstance) {
+    if (options?.isInstance) {
       instance = constructor;
     } else {
-      instance = loadDependencies ? this.inject(constructor) : new constructor();
+      instance = options?.loadDependencies ? this.inject(constructor) : new constructor();
     }
     this.dependencies.set(token, instance);
   }
